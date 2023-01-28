@@ -1,0 +1,29 @@
+server:
+  port: 520
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://127.0.0.1/byzh_for_com?serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://127.0.0.1/corner_test?serverTimezone=Asia/Shanghai
+    username: super
+    password: "super123456"
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
